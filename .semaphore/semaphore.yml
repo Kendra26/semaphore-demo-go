@@ -9,12 +9,7 @@ agent:
 
 blocks:
   - name: Download & Upload
-    task:
-      env_vars:
-        - name: PIXELDRAIN_API_KEY
-          value: 5f45f184-64bb-4eaa-be19-4a5f0459db49   # 🔐 Replace with your actual key
-        - name: TORRENT_MAGNET
-          value: "magnet:?xt=urn:btih:..."              # 🔗 Replace with your magnet link
+    tasks:           # 🔗 Replace with your magnet link
       jobs:
         - name: Download and Upload Files
           commands:
