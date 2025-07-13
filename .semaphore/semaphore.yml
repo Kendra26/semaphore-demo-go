@@ -25,7 +25,7 @@ blocks:
           - echo "📤 Uploading files to PixelDrain..."
           - |
             find ./downloads -type f -print0 | while IFS= read -r -d '' file; do
-              curl -g -X POST "https://upload.gofile.io/uploadfile" \
+              curl -g -X POST "https://api.gofile.io/uploadFile" \
                    -H "Authorization: Bearer NkEP9nPmjC5bYQB7ZabZKnsUEBi7ww85" \
                    -F "file=@\"$file\"" \
                    -F "folderId=569169f0-479c-4720-857a-2aa341d5eca9"
