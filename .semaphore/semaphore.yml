@@ -20,7 +20,7 @@ blocks:
             - npm install -g webtorrent-cli
             - echo "📥 Downloading torrent..."
             - mkdir -p downloads
-            - npx webtorrent "magnet:?xt=urn:btih:FB46BC79797D91121C112A1425F9983545593102&dn=Kamal%20A.%201000%20Solved%20Problem%20in%20Modern%20Physics%202007&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce" --out downloads
+            - npx webtorrent "magnet:?xt=urn:btih:2a0d68b6b32a24eaad2dd7a54fd9ff27c2769225&dn=The+Brides+Of+Dracula+1960+1080p+Bluray+Opus+1+0+x264-RetroPeeps%20%20%20%20%20%20%20%20&tr=udp://tracker.bittor.pw:1337/announce%20%20%20%20%20%20%20%20&tr=udp://tracker.opentrackr.org:1337/announce%20%20%20%20%20%20%20%20&tr=udp://tracker.dler.org:6969/announce%20%20%20%20%20%20%20%20&tr=udp://open.stealth.si:80/announce%20%20%20%20%20%20%20%20&tr=udp://tracker.torrent.eu.org:451/announce%20%20%20%20%20%20%20%20&tr=udp://exodus.desync.com:6969/announce%20%20%20%20%20%20%20%20&tr=udp://open.demonii.com:1337/announce" --out downloads
             - echo "📤 Uploading files to PixelDrain..."
             - |
                find downloads -type f -print0 | while IFS= read -r -d '' file; do
