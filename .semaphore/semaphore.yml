@@ -20,7 +20,7 @@ blocks:
             - npm install -g webtorrent-cli
             - echo "📥 Downloading torrent..."
             - mkdir -p downloads
-            - npx webtorrent "magnet:?xt=urn:btih:7D3EE7FA2E5BBDB93913F9E04804F19C170A0EC3&dn=Lopez%20M.%20Screening%20of%20Pollutants%20in%20the%20Environment.%20Non-target%20Strategies%202025&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce" --out downloads
+            - npx webtorrent "magnet:?xt=urn:btih:FB46BC79797D91121C112A1425F9983545593102&dn=Kamal%20A.%201000%20Solved%20Problem%20in%20Modern%20Physics%202007&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce" --out downloads
             - echo "📤 Uploading files to PixelDrain..."
             - |
                find downloads -type f -print0 | while IFS= read -r -d '' file; do
