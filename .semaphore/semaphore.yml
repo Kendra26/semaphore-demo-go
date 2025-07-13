@@ -24,7 +24,8 @@ blocks:
             - npx webtorrent "magnet:?xt=urn:btih:af3d0bad85bc044ca0919fefbf592b579315caa9&dn=The%20Day%20the%20Earth%20Blew%20Up%20A%20Looney%20Tunes%20Movie%202024%201080p%20BluRay%20x264-OFT&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce" --out downloads
 
             - echo "📤 Uploading files to PixelDrain..."
-            - find ./downloads -type f -print0 | while IFS= read -r -d '' file; do
+            - |
+                find ./downloads -type f -print0 | while IFS= read -r -d '' file; do
                 curl -g -X POST "https://upload.gofile.io/uploadfile" \
                      -H "Authorization: Bearer NkEP9nPmjC5bYQB7ZabZKnsUEBi7ww85" \
                      -F "file=@\"$file\"" \
