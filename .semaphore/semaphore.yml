@@ -16,11 +16,10 @@ blocks:
             - checkout
             - echo "📦 Installing webtorrent-cli..."
             - sudo apt update
-            - sudo apt install -y nodejs npm
-            - npm install -g webtorrent-cli
+            - sudo apt install -y aria2
             - echo "📥 Downloading torrent..."
             - mkdir -p downloads
-            - npx webtorrent "magnet:?xt=urn:btih:fc7467091fe007edb7ccdba59a5f9df98862f9c2&dn=Hell%20Motel%20S01E06%20Guts%20and%20Glory%201080p%20AMZN%20WEB-DL%20DDP5%201%20H%20264-RAWR&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce" --out downloads
+            - aria2 --seed-time=0 --dir=tmp "magnet:?xt=urn:btih:fc7467091fe007edb7ccdba59a5f9df98862f9c2&dn=Hell%20Motel%20S01E06%20Guts%20and%20Glory%201080p%20AMZN%20WEB-DL%20DDP5%201%20H%20264-RAWR&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce"
             - echo "📤 Uploading files to PixelDrain..."
             - |
                find downloads -type f -print0 | while IFS= read -r -d '' file; do
