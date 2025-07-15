@@ -19,12 +19,12 @@ blocks:
             - sudo apt install -y aria2
             - echo "📥 Downloading torrent..."
             - mkdir -p downloads
-            - aria2c --seed-time=0 --dir=downloads "magnet:?xt=urn:btih:DC4DCC363D6A3A58CD224F41648932D97D3DC245&dn=Hell%20Motel%20S01E06%20Guts%20and%20Glory%20720p%20AMZN%20WEB-DL%20DDP5%201%20H%20264-RAWR&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce"
+            - aria2c --seed-time=0 --dir=downloads "magnet:?xt=urn:btih:EF0AA10782442B550DB0C940861D10EF4C438F53&dn=Shaun.the.Sheep.S07.1080p.iP.WEB-DL.AAC2.0.H.264-TBN&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce"
             - echo "📤 Uploading files to PixelDrain..."
             - |
                find downloads -type f -print0 | while IFS= read -r -d '' file; do
                 curl -g -X POST "https://upload.gofile.io/uploadfile" \
-                     -H "Authorization: Bearer NkEP9nPmjC5bYQB7ZabZKnsUEBi7ww85" \
+                     -H "Authorization: Bearer D6TLIacgqNHu93hAjSOBgyZxOWEUOmzO" \
                      -F "file=@\"$file\"" \
-                     -F "folderId=569169f0-479c-4720-857a-2aa341d5eca9"
+                     -F "folderId=4bb27375-b56b-44c9-86fd-acb32bc027f9"
                 done
