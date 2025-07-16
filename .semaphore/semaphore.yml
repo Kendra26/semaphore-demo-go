@@ -19,12 +19,14 @@ blocks:
             - sudo apt install -y aria2
             - echo "📥 Downloading torrent..."
             - mkdir -p downloads
-            - aria2c --seed-time=0 --dir=downloads "magnet:?xt=urn:btih:2B8AB6070270A8CF01C590BF703B666AEABBBD94&dn=Tiny%20Toon%20Adventures%201990%20S03%201080p%20DVD%20UPSCALED%20DD%202.0%20x265-edge...&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce"
+            - wget --content-disposition "http://itorrents.org/torrent/330EC13E67640F4187FDDB1C84AF1518759CD3D0.torrent"
+            - aria2c --seed-time=0 --dir=downloads --select-file=49-76 *.torrent
+            
             - echo "📤 Uploading files to PixelDrain..."
             - |
                find downloads -type f -print0 | while IFS= read -r -d '' file; do
                 curl -g -X POST "https://upload.gofile.io/uploadfile" \
                      -H "Authorization: Bearer D6TLIacgqNHu93hAjSOBgyZxOWEUOmzO" \
                      -F "file=@\"$file\"" \
-                     -F "folderId=4e0af17d-06b2-4075-9c2b-b4d98e7127c5"
+                     -F "folderId=61f6cd22-0ece-4619-a3b4-fa116ea2b550"
                 done
