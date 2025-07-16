@@ -18,9 +18,8 @@ blocks:
             - sudo apt update
             - sudo apt install -y aria2
             - echo "📥 Downloading torrent..."
-            - mkdir -p downloads
-            - wget --content-disposition "http://itorrents.org/torrent/330EC13E67640F4187FDDB1C84AF1518759CD3D0.torrent"
-            - aria2c --seed-time=0 --dir=downloads --select-file=77-103 *.torrent
+            - mkdir -p downloads 
+            - aria2c --seed-time=0 --dir=downloads "magnet:?xt=urn:btih:6d039d8350f8096aedd6452535beb01d5190f323&dn=The%20Magic%20School%20Bus%20Rides%20Again&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fwepzone.net%3A6969%2Fannounce&tr=udp%3A%2F%2Fttk2.nbaonlineservice.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker2.dler.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tryhackx.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.srv00.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qu.ax%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ololosh.space%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.fnix.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filemail.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dump.cl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker-udp.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Ft.overflow.biz%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.bt4g.com%3A443%2Fannounce"
             
             - echo "📤 Uploading files to PixelDrain..."
             - |
@@ -28,5 +27,5 @@ blocks:
                 curl -g -X POST "https://upload.gofile.io/uploadfile" \
                      -H "Authorization: Bearer D6TLIacgqNHu93hAjSOBgyZxOWEUOmzO" \
                      -F "file=@\"$file\"" \
-                     -F "folderId=687ab9bc-238b-407a-8f95-a50c6b4b717e"
+                     -F "folderId=5d3c1717-0ab6-40bc-ad87-b441d892cecf"
                 done
