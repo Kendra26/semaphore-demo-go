@@ -19,12 +19,12 @@ blocks:
             - sudo apt install -y aria2
             - echo "📥 Downloading torrent..."
             - mkdir -p downloads
-            - aria2c --seed-time=0 --dir=downloads "magnet:?xt=urn:btih:EF0AA10782442B550DB0C940861D10EF4C438F53&dn=Shaun.the.Sheep.S07.1080p.iP.WEB-DL.AAC2.0.H.264-TBN&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce"
+            - aria2c --seed-time=0 --dir=downloads "magnet:?xt=urn:btih:6EA13942D66D56E5641E05FCAB8B1F2CFAE791D0&dn=Tiny%20Toon%20Adventures%201990%20S02%201080p%20DVD%20UPSCALED%20DD%202.0%20x265-edge...&tr=udp://tracker.bittor.pw:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.dler.org:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce"            
             - echo "📤 Uploading files to PixelDrain..."
             - |
                find downloads -type f -print0 | while IFS= read -r -d '' file; do
                 curl -g -X POST "https://upload.gofile.io/uploadfile" \
                      -H "Authorization: Bearer D6TLIacgqNHu93hAjSOBgyZxOWEUOmzO" \
                      -F "file=@\"$file\"" \
-                     -F "folderId=4bb27375-b56b-44c9-86fd-acb32bc027f9"
+                     -F "folderId=418d0507-7a78-45a2-bcaa-5aa86f1bda8a"
                 done
