@@ -20,7 +20,7 @@ blocks:
             - echo "📥 Downloading torrent..."
             - mkdir -p downloads
             - wget --content-disposition "http://itorrents.org/torrent/330EC13E67640F4187FDDB1C84AF1518759CD3D0.torrent"
-            - aria2c --seed-time=0 --dir=downloads --select-file=49-76 *.torrent
+            - aria2c --seed-time=0 --dir=downloads --select-file=77-103 *.torrent
             
             - echo "📤 Uploading files to PixelDrain..."
             - |
@@ -28,5 +28,5 @@ blocks:
                 curl -g -X POST "https://upload.gofile.io/uploadfile" \
                      -H "Authorization: Bearer D6TLIacgqNHu93hAjSOBgyZxOWEUOmzO" \
                      -F "file=@\"$file\"" \
-                     -F "folderId=61f6cd22-0ece-4619-a3b4-fa116ea2b550"
+                     -F "folderId=687ab9bc-238b-407a-8f95-a50c6b4b717e"
                 done
