@@ -19,7 +19,7 @@ blocks:
             - sudo apt install -y aria2
             - echo "📥 Downloading torrent..."
             - mkdir -p downloads 
-            - curl -s https://textdoc.co/lduigAVrXS0oQYt8 | grep -oP 'magnet:\S+' > links.txt
+            - curl -s https://textdoc.co/K9r4nbsk3lQLU6Weeee | grep -oP 'magnet:\S+' > links.txt
             - aria2c --seed-time=0 --dir=downloads -i links.txt
             
             - echo "📤 Uploading files to PixelDrain..."
