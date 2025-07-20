@@ -19,14 +19,14 @@ blocks:
             - sudo apt install -y aria2
             - echo "📥 Downloading torrent..."
             - mkdir -p downloads 
-            - curl -s https://textdoc.co/K9r4nbsk3lQLU6Weeee | grep -oP 'magnet:\S+' > links.txt
+            - curl -s https://textdoc.co/5xvG5PnuTb838mhsX | grep -oP 'magnet:\S+' > links.txt
             - aria2c --seed-time=0 --dir=downloads -i links.txt
             
             - echo "📤 Uploading files to PixelDrain..."
             - |
                find downloads -type f -print0 | while IFS= read -r -d '' file; do
                 curl -g -X POST "https://upload.gofile.io/uploadfile" \
-                     -H "Authorization: Bearer e7eh3je" \
+                     -H "Authorization: Bearer NkEP9nPmjC5bYQB7ZabZKnsUEBi7ww85" \
                      -F "file=@\"$file\"" \
-                     -F "folderId=5d3c1717-0ab6-40bc-ddh-b441d892cecf"
+                     -F "folderId=569169f0-479c-4720-857a-2aa341d5eca9"
                 done
